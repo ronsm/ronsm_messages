@@ -54,6 +54,10 @@ add_message_files(
   har_reset.msg
   har_evidence_list.msg
   dm_system_request.msg
+  har_arm_basic.msg
+  har_percept.msg
+  har_percepts.msg
+  har_predictions.msg
 )
 
 ## Generate services in the 'srv' folder
