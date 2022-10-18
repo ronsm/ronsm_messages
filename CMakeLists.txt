@@ -9,9 +9,11 @@ project(ronsm_messages)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   rospy
+  roscpp
   std_msgs
   message_generation
   actionlib_msgs
+  sensor_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -53,11 +55,13 @@ add_message_files(
   har_simple_evidence.msg
   har_reset.msg
   har_evidence_list.msg
-  dm_system_request.msg
+  dm_intent.msg
+  dm_al_request.msg
   har_arm_basic.msg
   har_percept.msg
   har_percepts.msg
   har_predictions.msg
+  is_clusters.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -78,6 +82,7 @@ generate_messages(
   DEPENDENCIES
   std_msgs
   actionlib_msgs
+  sensor_msgs
 )
 
 ################################################
@@ -111,6 +116,7 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
  CATKIN_DEPENDS rospy
+ CATKIN_DEPENDS roscpp
  CATKIN_DEPENDS message_runtime
  CATKIN_DEPENDS actionlib_msgs
 )
