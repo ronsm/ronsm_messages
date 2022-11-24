@@ -1,2 +1,1 @@
-string h
-string s
+string prediction
